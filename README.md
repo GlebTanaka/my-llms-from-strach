@@ -16,6 +16,7 @@ This is a personal educational project created to:
     - PyTorch (with MPS support)
     - NumPy
     - JupyterLab
+    - tiktoken (for Byte Pair Encoding tokenization)
 
 ## Attribution
 All concepts and original implementations are from the book "LLMs from Scratch" by Sebastian Raschka. This repository is for personal learning purposes only and is not affiliated with or endorsed by the original author.
