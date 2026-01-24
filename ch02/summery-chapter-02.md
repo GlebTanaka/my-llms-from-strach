@@ -44,6 +44,10 @@
 *   **Token Embeddings:**
     *   Implemented using `torch.nn.Embedding(vocab_size, output_dim)`.
     *   Each integer ID serves as an index to look up a trainable vector.
+    *   **Intuition (Word Embeddings):** Think of each word as a point on a map with many dimensions. During training, words used in similar contexts move closer together on this map (e.g., "cat" and "dog"), while unrelated words stay far apart (e.g., "cat" and "galaxy"). The model learns these positions by trying to predict the next token, so the vectors end up capturing meaning and relationships (like "king" ~ "queen" in a similar direction).
+    *   **Tiny Toy Example (2D):** Suppose the model learns:  
+        `cat = [1.1, 0.9]`, `dog = [1.0, 1.0]`, `galaxy = [-0.8, -1.2]`.  
+        "cat" and "dog" are close (small distance), while "galaxy" is far away. In real models, these are 100s or 1000s of dimensions, but the idea is the same.
 *   **Positional Embeddings:**
     *   *Problem:* The Transformer architecture has no inherent sense of order/sequence.
     *   *Solution:* We added a second embedding layer `torch.nn.Embedding(context_length, output_dim)` representing absolute positions (0, 1, 2...).
