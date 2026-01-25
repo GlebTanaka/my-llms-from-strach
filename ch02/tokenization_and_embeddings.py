@@ -6,6 +6,13 @@ from torch.utils.data import Dataset, DataLoader
 import urllib.request
 import tiktoken
 
+# NOTE (2026-01-25):
+# This file is kept for reference/backwards compatibility.
+# Preferred module-style package for Chapter 2 lives in:
+#   ch02/llmsfs_ch02/
+# Run the chapter smoke test from repo root with:
+#   python -m ch02.llmsfs_ch02.run_smoke_test
+
 class SimpleTokenizerV1:
     """
     A basic tokenizer that splits text on specified patterns and converts tokens to IDs.

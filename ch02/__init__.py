@@ -1,0 +1,1 @@
+"""Chapter 2 package (enables `python -m ch02...`)."""
